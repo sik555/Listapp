@@ -58,7 +58,7 @@ namespace Listapp.Controllers
         {
             ValidationResult valresult = listvalidator.Validate(list);
             List result;
-
+            list.Id = ObjectId.GenerateNewId().ToString();
             if (!valresult.IsValid)
             {
                 return BadRequest("Make sure title and description are filled in");

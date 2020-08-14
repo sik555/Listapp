@@ -49,22 +49,6 @@ namespace Listapp.Services
 
         public void Update(string id, List listIn)
         {
-            //var filter = Builders<List>.Filter.Eq("id", id);
-
-            //var update = Builders<List>.Update.Set("Title", listIn.Title);
-            //_Lists.UpdateOne(filter,update);
-
-            //update = Builders<List>.Update.Set("Description", listIn.Description);
-            //_Lists.UpdateOne(filter, update);
-
-            //update = Builders<List>.Update.Set("Image", listIn.Image);
-            //_Lists.UpdateOne(filter, update);
-
-            //update = Builders<List>.Update.Set("Items", listIn.Items);
-            //_Lists.UpdateOne(filter, update);
-
-            //update = Builders<List>.Update.Set("Owner", listIn.Owner);
-            //_Lists.UpdateOne(filter, update);
 
             _Lists.ReplaceOne(x => x.Id == id, listIn);
 
